@@ -4,9 +4,10 @@ import java.awt.event.*;
 
 public class WorkingWithCardLayout {
     JFrame mainframe;
+    CardLayout cardLayout;
     public WorkingWithCardLayout() {
         showMainFrame();
-        CardLayout cardLayout;
+        showcards();
     }
     //creating a method instead of using the constructor
     public void showMainFrame(){
@@ -18,8 +19,8 @@ public class WorkingWithCardLayout {
     //method to show the three cards
     public void showcards(){
 //creating the parent container for the cards
-
-        JPanel container=new JPanel(new CardLayout());
+        cardLayout =new CardLayout();
+        JPanel container=new JPanel(cardLayout);
         //creating the cards that will be in the container
         JPanel cardone=new JPanel();
         cardone.setBackground(Color.RED);

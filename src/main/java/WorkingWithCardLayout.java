@@ -6,6 +6,7 @@ public class WorkingWithCardLayout {
     JFrame mainframe;
     public WorkingWithCardLayout() {
         showMainFrame();
+        CardLayout cardLayout;
     }
     //creating a method instead of using the constructor
     public void showMainFrame(){
@@ -17,6 +18,7 @@ public class WorkingWithCardLayout {
     //method to show the three cards
     public void showcards(){
 //creating the parent container for the cards
+
         JPanel container=new JPanel(new CardLayout());
         //creating the cards that will be in the container
         JPanel cardone=new JPanel();

@@ -59,6 +59,7 @@ public class WorkingWithCardLayout {
         mainframe.add(container, BorderLayout.CENTER);
         mainframe.add(buttonPanel, BorderLayout.SOUTH);
         //make the frame visible
+        mainframe.setVisible(true);
 
 
     }

@@ -1,7 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-
 public class WorkingWithCardLayout {
     JFrame mainframe;
     CardLayout cardLayout;
@@ -13,33 +12,32 @@ public class WorkingWithCardLayout {
     public void showMainFrame(){
         mainframe=new JFrame("working with cardlayout");
         mainframe.setSize(500,700);
+        mainframe.setLayout(new BorderLayout());
         //CardLayout card=new CardLayout();
         mainframe.setVisible(true);
-    };
+    }
     //method to show the three cards
-    public void showcards(){
+    public void showcards() {
 //creating the parent container for the cards
-        cardLayout =new CardLayout();
-        JPanel container=new JPanel(cardLayout);
+        cardLayout = new CardLayout();
+        JPanel container = new JPanel(cardLayout);
         //creating the cards that will be in the container
-        JPanel cardone=new JPanel();
+        JPanel cardone = new JPanel();
         cardone.setBackground(Color.RED);
         cardone.add(new JLabel("cardone"));
-        JPanel cardtwo=new JPanel();
+        JPanel cardtwo = new JPanel();
         cardtwo.setBackground(Color.YELLOW);
         cardtwo.add(new JLabel("cardtwo"));
-        JPanel cardthree=new JPanel();
+        JPanel cardthree = new JPanel();
         cardthree.setBackground(Color.GREEN);
         cardthree.add(new JLabel("cardthree"));
         //adding the three cards to the container
-        container.add(cardone,"1");
-        container.add(cardtwo,"2");
-        container.add(cardthree,"3");
+        container.add(cardone, "1");
+        container.add(cardtwo, "2");
+        container.add(cardthree, "3");
         //creating buttons to switch the cards
-        JButton nextcard=new JButton("see next pane");
-        JButton prevcard=new JButton("see previous pane");
-        //instance of the cardlayout
-        CardLayout showingcards=(CardLayout) container.getLayout();
+        JButton nextcard = new JButton("see next pane");
+        JButton prevcard = new JButton("see previous pane");
         //add ActionListeners to the buttons
         nextcard.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

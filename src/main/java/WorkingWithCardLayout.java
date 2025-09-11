@@ -40,8 +40,17 @@ public class WorkingWithCardLayout {
         JButton prevcard=new JButton("see previous pane");
         //instance of the cardlayout
         CardLayout showingcards=(CardLayout) container.getLayout();
-        //Awab create the following:
         //add ActionListeners to the buttons
+        nextcard.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                cardLayout.next(container);
+            }
+        });
+        prevcard.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                cardLayout.previous(container);
+            }
+        });
         //create a panel for the buttons
         //add the container to the jframe(mainframe)
         //add the button panel to the frame

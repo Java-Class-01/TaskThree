@@ -52,6 +52,9 @@ public class WorkingWithCardLayout {
             }
         });
         //create a panel for the buttons
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(prevcard);
+        buttonPanel.add(nextcard);
         //add the container to the jframe(mainframe)
         //add the button panel to the frame
         //make the frame visible

@@ -32,9 +32,9 @@ public class WorkingWithCardLayout {
         cardthree.setBackground(Color.GREEN);
         cardthree.add(new JLabel("cardthree"));
         //adding the three cards to the container
-        container.add(cardone);
-        container.add(cardtwo);
-        container.add(cardthree);
+        container.add(cardone,"1");
+        container.add(cardtwo,"2");
+        container.add(cardthree,"3");
         //creating buttons to switch the cards
         JButton nextcard=new JButton("see next pane");
         JButton prevcard=new JButton("see previous pane");

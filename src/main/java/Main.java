@@ -1,9 +1,13 @@
+import java.awt.GraphicsEnvironment;
+
 public class Main{
     public static void main(String[]args){
-        WorkingWithCardLayout cards=new WorkingWithCardLayout();
-        cards.showMainFrame();
-        cards.showcards();
-
-
+        if (GraphicsEnvironment.isHeadless()) {
+            System.out.println("For Jenkins purposes - skipping UI");
+        } else {
+            WorkingWithCardLayout cards = new WorkingWithCardLayout();
+            cards.showMainFrame();
+            cards.showcards();
+        }
     }
 }

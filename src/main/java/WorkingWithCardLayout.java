@@ -8,7 +8,7 @@ public class WorkingWithCardLayout {
         showMainFrame();
         showcards();
     }
-    //creating a method instead of using the constructor
+
     public void showMainFrame(){
         mainframe=new JFrame("working with cardlayout");
         mainframe.setSize(500,700);
@@ -16,12 +16,10 @@ public class WorkingWithCardLayout {
         //CardLayout card=new CardLayout();
         mainframe.setVisible(true);
     }
-    //method to show the three cards
+
     public void showcards() {
-//creating the parent container for the cards
         cardLayout = new CardLayout();
         JPanel container = new JPanel(cardLayout);
-        //creating the cards that will be in the container
         JPanel cardone = new JPanel();
         cardone.setBackground(Color.RED);
         cardone.add(new JLabel("cardone"));
@@ -35,10 +33,8 @@ public class WorkingWithCardLayout {
         container.add(cardone, "1");
         container.add(cardtwo, "2");
         container.add(cardthree, "3");
-        //creating buttons to switch the cards
         JButton nextcard = new JButton("see next pane");
         JButton prevcard = new JButton("see previous pane");
-        //add ActionListeners to the buttons
         nextcard.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 cardLayout.next(container);
@@ -53,10 +49,8 @@ public class WorkingWithCardLayout {
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(prevcard);
         buttonPanel.add(nextcard);
-        //add the container and button to the jframe(mainframe)
         mainframe.add(container, BorderLayout.CENTER);
         mainframe.add(buttonPanel, BorderLayout.SOUTH);
-        //make the frame visible
         mainframe.setVisible(true);
 
 

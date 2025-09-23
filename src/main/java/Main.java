@@ -1,5 +1,5 @@
 import java.awt.GraphicsEnvironment;
-//best
+//best2
 public class Main{
     public static void main(String[]args){
         if (GraphicsEnvironment.isHeadless()) {
